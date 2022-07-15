@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title>Apply for a trip</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>HTML Form Elements</h1>
+
+    <p class="first-Paragraph">Let's create a form to apply for a trip at a tourism company.</p>
+
+    <p class="first-Paragraph"> We will collect the following information:</p>
+
+    <ul>
+        <li>Name of the person applying</li>
+        <li>Their social security number</li>
+        <li>Their email address</li>
+        <li>Destination</li>
+        <li>Departure date</li>
+        <li>Return date</li>
+        <li>Their gender</li>
+        <li>An image of their passport</li>
+        <li>In how many stars of an hotel they'd like to stay</li>
+        <li>Any notes they might have</li>
+        <li>The option to include breakfast and lunch</li>
+    </ul>
+
+
+    <fieldset>
+        <legend class="legend">Key takeaways:</legend>
+        <ul>
+
+            <li>How can we label our inputs?</li>
+            <li>How can further organize our form by grouping similar inputs?</li>
+            <li>Can we show how many stars the user has selected?</li>
+            <li>How can we submit our form</li>
+            <li>How can mark some of the inputs as required?</li>
+            <li>Is it possible to change the submittion method?</li>
+            <li>How can we reset our form?</li>
+            <li>What other types does the input element support?</li>
+        </ul>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend class="legend">Personal Information</legend>
+        <form action="./submit-form.html" method="POST">
+            <table class="info" >
+                <tr>
+                    <td colspan=""> <label class="labels" for="personName">Name</label></td>
+                    <td> <input name="name" id="personName" type="text"></td>
+                </tr>
+
+                <tr>
+                    <td><label class="labels" for="socialSecurity">Social security number</label></td>
+                    <td> <input required name="socialSecurity" id="socialSecurity" type="number"
+                            placeholder="Social security number"></td>
+                </tr>
+                <tr>
+                    <td><label class="labels" for="personEmail">Email</label></td>
+                    <td> <input name="email" id="personEmail" type="email"></td>
+                </tr>
+
+                <tr>
+                    <td> <label class="labels" for="destination">Destination</label></td>
+                    <td>
+                        <select name="destination" id="destination">
+                            <option value="spain">Spain (Europe)</option>
+                            <option value="turkey3">Turkey</option>
+                            <option value="palestine">Palestine</option>
+                            <option value="italy">Italy</option>
+                            <option value="japan">Japan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label class="labels" for="departureDate">Deprature</label></td>
+                    <td> <input name="departure" id="departureDate" type="date"></td>
+                </tr>
+                <tr>
+                    <td><label class="labels" for="returnDate">Return</label></td>
+                    <td><input name="return" id="returnDate" type="date"></td>
+                </tr>
+                <tr>
+                    <td><label class="labels" for="genderMale">gender</label></td>
+                    <td><label class="labels" for="genderMale">Male</label>
+                        <input name="gender" id="genderMale" type="radio">
+                        <label class="labels" for="genderFemale">Female</label>
+                        <input name="gender" id="genderFemale" type="radio">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="labels" for="passport">Image of your passport</label></td>
+                    <td><input type="file" name="passport" id="passport" accept="image/*"></td>
+                </tr>
+            </table>
+
+
+
+
+
+    </fieldset>
+
+    <fieldset>
+        <legend class="legend" >Other Informations</legend>
+<table>
+
+<tr>
+    <td>  <label class="labels" for="stars">How many stars?</label></td>
+    <td><input type="range" name="stars" id="stars" min="1" max="5" value="3"></td>
+</tr>
+<tr>
+    <td> <label class="labels" for="userNotes">Any notes?</label></td>
+    <td><textarea id="userNotes" rows="7" cols="40"></textarea></td>
+</tr>
+<tr>
+   
+    <td><label class="labels" for="includeBreakfast">Include breakfast and lunch?</label></td>
+    <td><input type="checkbox" id="includeBreakfast">Eges
+        <input type="checkbox" id="includeBreakfast">Fruit
+        <input type="checkbox" id="includeBreakfast">juice
+    </td>
+</tr>
+
+
+</table>
+ </fieldset>
+    
+ <button class="bottoms" type="submit">Submit</button>
+ <button class="bottoms" type="reset">Reset</button> 
+    </form>
+</body>
+
+</html>
